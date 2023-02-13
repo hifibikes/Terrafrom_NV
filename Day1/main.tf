@@ -8,6 +8,6 @@ resource "aws_instance" "web_serever" {
   }
    key_name = var.key_name
    availability_zone = var.az["az1"]
-   
+   vpc_security_group_ids = [ aws_security_group.tf-sg.id]
    user_data = file("httpd.sh")
 }
