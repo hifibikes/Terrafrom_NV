@@ -8,5 +8,6 @@ resource "aws_instance" "web_serever" {
   }
    key_name = var.key_name
    availability_zone = var.az["az1"]
-    
+   
+   user_data = file("httpd.sh")
 }
