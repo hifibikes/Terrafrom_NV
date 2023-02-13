@@ -1,6 +1,6 @@
 resource "aws_instance" "web_serever" {
   ami =    var.ami[0] 
-  count = 2
+  #count = 2
   instance_type = var.instance_type
   tags = {
     "Name" = "Web-Server"
