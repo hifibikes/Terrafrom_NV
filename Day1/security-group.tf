@@ -1,6 +1,6 @@
 resource "aws_security_group" "tf-sg" {
    name = "allow-ssh-http"
-   tags {
+   tags = {
       Name = "ec2-sg"
    } 
     ingress  {
