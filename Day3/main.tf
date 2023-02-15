@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "s3-bkt" {
-    name = var.bkt_name
+    bucket = var.bkt_name
     tags = {
       "Env" = "dev"
     }
