@@ -1,3 +1,3 @@
 variable "db_name" {
-  default = "my-db"
+  default = "mydb"
 }
