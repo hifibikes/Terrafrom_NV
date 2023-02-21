@@ -9,17 +9,32 @@ resource "aws_instance" "ec2" {
 #    command = "echo ${self.private_ip} >> private_ip.txt"
 #  }
 
-  provisioner "file" {
-    source      = "http"
-    destination = "/home/ec2-user/http"
+  # provisioner "file" {
+  #   source      = "http"
+  #   destination = "/home/ec2-user/http"
      
-    connection {
+  #   connection {
+  #        user = "ec2-user"
+  #        type = "ssh"
+  #        private_key = file("NV_Mayank.pem")
+  #        host = self.public_ip
+  #   }
+
+  # } 
+  
+   provisioner "remote-exec" {
+       connection {
          user = "ec2-user"
          type = "ssh"
          private_key = file("NV_Mayank.pem")
          host = self.public_ip
     }
+     inline = [
+       "sudo yum install httpd -y",
+       "sudo systemctl start httpd"
+     ]
 
-  } 
-  
+   }
+
+
 }
