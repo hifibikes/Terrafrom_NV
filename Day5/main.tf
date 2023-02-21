@@ -11,7 +11,7 @@ resource "aws_instance" "ec2" {
 
   provisioner "file" {
     source      = "http"
-    destination = "/home/ec2-user"
+    destination = "/home/ec2-user/http"
      
     connection {
          user = "ec2-user"
