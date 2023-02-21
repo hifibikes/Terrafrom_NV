@@ -4,7 +4,7 @@ resource "aws_instance" "ec2" {
   }
   instance_type = "t2.micro"
   ami = "ami-0aa7d40eeae50c9a9"
-
+  key_name = "NV_Mayank.pem"
 #   provisioner "local-exec" {
 #    command = "echo ${self.private_ip} >> private_ip.txt"
 #  }
