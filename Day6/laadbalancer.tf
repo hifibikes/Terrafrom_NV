@@ -31,7 +31,7 @@ resource "aws_lb_target_group" "mobile-tg" {
 }
 
 resource "aws_lb" "app_lb" {
-    name = "application_load_balancer"
+    name = "application-load-balancer"
     load_balancer_type = "application"
     security_groups = [aws_security_group.tf-sg.id]
     subnets = [aws_subnet.public_subnet.id, aws_subnet.private_subnet.id]
