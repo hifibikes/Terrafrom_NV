@@ -7,7 +7,7 @@ resource "aws_vpc" "main" {
 
 resource "aws_subnet" "public_subnet" {
   vpc_id = aws_vpc.main.id
-  cidr_block = var.cicr["pub_cidr"] 
+  cidr_block = var.cidr["pub_cidr"] 
   availability_zone = var.az["az1"]
   tags = {
     "Name" = "Public-Subnet"
@@ -17,7 +17,7 @@ resource "aws_subnet" "public_subnet" {
 
 resource "aws_subnet" "private_subnet" {
   vpc_id = aws_vpc.main.id
-  cidr_block = var.cicr["pri_cidr"] 
+  cidr_block = var.cidr["pri_cidr"] 
   availability_zone = var.az["az2"]
   tags = {
     "Name" = "Private-Subnet"
