@@ -13,7 +13,6 @@ resource "aws_subnet" "public_subnet" {
     "Name" = "Public-Subnet"
   }
   map_public_ip_on_launch = true
-
 }
 
 resource "aws_subnet" "private_subnet" {
@@ -53,7 +52,7 @@ resource "aws_route" "ar" {
 
 resource "aws_eip" "aeip" {
   tags = {
-    "Name" = "eip"
+    "Name" = "eip"  
   }
 }
 
