@@ -1,5 +1,5 @@
 variable "cidr" {
-  type = map(sting)
+  type = map(string)
   default = {
     "all" = "0.0.0.0/0"
     "vpc_cidr" = "20.0.0.0/16"
