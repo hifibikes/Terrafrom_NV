@@ -1,5 +1,6 @@
 resource "aws_security_group" "tf-sg" {
    name = "allow-ssh-http"
+   vpc_id = aws_vpc.main.id
    tags = {
       Name = "ec2-sg"
    } 

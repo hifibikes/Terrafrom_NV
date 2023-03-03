@@ -76,7 +76,7 @@ resource "aws_route_table" "art2" {
 }
 
 resource "aws_route_table_association" "arta2" {
-  subnet_id = aws_instance.private_ec2.id
+  subnet_id = aws_subnet.private_subnet.id
   route_table_id = aws_route_table.art2.id 
 }
 
