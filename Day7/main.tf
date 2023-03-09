@@ -3,6 +3,7 @@ terraform {
     bucket = "bucket-in28min-123123"
     key    = "terrafrom_state_file/terraform.tfstate"
     region = "ap-southeast-1"
+    dynamodb_table = "terraform-state-lock-dynamodb-table"
   }
 }
 
